@@ -46,6 +46,7 @@ class ArticlesController < ApplicationController
 
   def destroy
     @article.destroy
+    ContactMailer.delete_notification.deliver_later
     redirect_to dashboard_url
   end
 

@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.5'
+ruby '2.7.0'
 
 # Core
 gem 'bootsnap', '>= 1.1.0', require: false
@@ -17,6 +17,7 @@ gem 'jquery-rails'
 gem 'redcarpet', '~> 3.5.1'
 gem 'sass-rails', '~> 5.0'
 gem 'webpacker', '~> 3.5'
+gem 'rexml'
 
 # Backend
 gem 'carrierwave'
@@ -62,6 +63,7 @@ group :development do
   gem 'listen', '~> 3.0.5'
   gem 'rack-mini-profiler', require: false
   gem 'web-console', '>= 3.3.0'
+  gem 'letter_opener_web'
 end
 
 group :test do
