@@ -408,6 +408,7 @@ DEPENDENCIES
   rails (= 5.2.5)
   rails-controller-testing
   redcarpet (~> 3.5.1)
+  rexml
   rspec-parameterized
   rspec-rails
   rspec-retry
@@ -426,7 +427,7 @@ DEPENDENCIES
   webpacker (~> 3.5)
 
 RUBY VERSION
-   ruby 2.6.5p114
+   ruby 2.7.0p0
 
 BUNDLED WITH
-   2.1.4
+   2.2.24
