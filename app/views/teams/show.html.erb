@@ -10,6 +10,7 @@
               <%= image_tag default_img(@team.icon_url), class: 'img' %><br>
               <%= @team.name %>
             </div>
+            
             <%= link_to I18n.t('views.messages.edit_team'), edit_team_path(@team), class: 'btn btn-success btn-block mt-3' %>
           </div>
 
@@ -32,6 +33,7 @@
                 <tr>
                   <td><%= image_tag 'default.jpg', size: '40x40' %></td>
                   <td><label style="background-color: red"><%= I18n.t('views.messages.leader') %></label>：<%= @team.owner.email %></td>
+
                 </tr>
               </table>
               <h5><%= I18n.t('views.messages.team_members2') %></h5>
@@ -41,6 +43,9 @@
                     <tr>
                       <td><%= image_tag 'default.jpg', size: '40x40' %></td>
                       <td><%= assign.user.email %></td>
+                      <%if @team.owner == current_user %>
+                      <td><%= link_to I18n.t('views.button.makeleader'), make_leader_path(assign.user.id, @team.id), class: 'btn btn-sm btn-primary' %></td>
+                      <%end%>
                       <td><%= link_to I18n.t('views.button.delete'), team_assign_path(@team, assign), method: :delete, class: 'btn btn-sm btn-danger' %></td>
                     </tr>
                   <% end %>
